@@ -1,0 +1,132 @@
+@import url(futura/stylesheet.css);
+
+html {
+  --basil-green: #88a308;
+  --dark-gray: #333333;
+  --light-gray: #999999;
+  --max-width: 840px;
+  /* --breakpoint: 640px; */
+}
+
+::selection {
+  background: var(--basil-green);
+  color: #fff;
+}
+
+.cf::before,
+.cf::after {
+    content: ' ';
+    display: table;
+}
+
+.cf::after {
+    clear: both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 100%/1.5 "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  color: var(--dark-gray);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+h2,
+h3 {
+  color: var(--basil-green);
+  margin: 8px 0;
+  font-size: 1.4rem;
+  letter-spacing: -1px;
+}
+
+a {
+  color: #f90;
+  text-decoration: none;
+  transition: color 0.5s linear;
+}
+
+a:hover {
+  color: #f00;
+}
+
+li > h4 {
+  margin-top: 12px;
+}
+
+aside li {
+  list-style: none;
+}
+
+article li,
+article ol {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.75rem;
+}
+
+header {
+  position: relative;
+  height: 120px;
+  background: var(--basil-green);
+  border-radius: 8px 8px 0px 0px;
+}
+
+header h1 {
+  background: url(img/basil.png) no-repeat;
+  font-family: FuturaStdLight, sans-serif;
+  font-weight: normal;
+  color: #fff;
+  font-size: 5rem;
+}
+
+.content {
+  /* background: url(img/html.png) repeat-y 50% 50%; */
+}
+
+article,
+aside {
+  padding: 1rem;
+}
+
+footer {
+  clear: both;
+  background-color: var(--basil-green);
+  padding: 1rem;
+  border-radius: 0 0 4px 4px;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .content {
+    display: flex;
+  }
+  article {
+    flex: 1 0 60%;
+  }
+  aside {
+    background: #f5faef;
+    box-shadow: -4px 0px 4px #ddd;
+  }
+}
